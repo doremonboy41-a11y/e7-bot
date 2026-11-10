@@ -1,0 +1,68 @@
+body {
+    background: #f3f5f9;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: rgba(0, 0, 0, 0.88);
+}
+
+.app {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex: 1;
+    min-height: 0;
+    width: 100%;
+    max-width: 1100px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 12px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    /* only if the window is made very small */
+    overflow-y: auto;
+}
+
+.main .ant-card {
+    flex: 0 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 1px 2px rgba(0, 21, 41, 0.06);
+}
+
+/* Custom background: the panels turn translucent so the picture shows through */
+.app.has-bg {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* ---------- Custom background ---------- */
+.app.has-bg .main .ant-card {
+    background: rgba(255, 255, 255, var(--card-alpha));
+    /* no blur: the picture stays sharp */
+    text-shadow: 0 0 4px rgba(255, 255, 255, calc(0.9 - var(--card-alpha)));
+}
+
+.app.has-bg .stats .tile {
+    background: rgba(247, 249, 252, calc(var(--card-alpha) * 0.9));
+}
+
+.app.has-bg .stats .tile.highlight {
+    background: rgba(240, 246, 255, calc(var(--card-alpha) * 0.9));
+}
+
+.app.has-bg .controls .toolbar {
+    border-bottom-color: rgba(0, 0, 0, calc(var(--card-alpha) * 0.08));
+}
+
+/* "Hide panels": only the picture is shown (the top bar stays so it can be turned back) */
+.main {
+    transition: opacity 0.25s;
+}
+
+.app.panels-hidden .main {
+    opacity: 0;
+    pointer-events: none;
+}

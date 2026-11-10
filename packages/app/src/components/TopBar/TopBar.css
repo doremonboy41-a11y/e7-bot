@@ -1,0 +1,46 @@
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 0 0 auto;
+    height: 52px;
+    padding: 0 20px;
+    background: linear-gradient(90deg, #001529 0%, #0b2a4a 100%);
+    color: #fff;
+}
+
+.topbar .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.topbar .brand-icon {
+    font-size: 26px;
+    color: #69b1ff;
+}
+
+.topbar .brand-title {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.topbar .brand-sub {
+    font-size: 12px;
+    opacity: 0.65;
+}
+
+.topbar .meta {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.topbar .status-text {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.topbar .ant-badge-status-default {
+    background-color: #9aa8ba;
+}

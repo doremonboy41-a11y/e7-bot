@@ -1,0 +1,78 @@
+.bg-button.ant-btn {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.bg-button.ant-btn:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.bg-picker {
+    width: 300px;
+}
+
+.bg-picker .bg-title {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.bg-picker .bg-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.bg-picker .bg-thumb {
+    height: 54px;
+    border-radius: 6px;
+    border: 2px solid transparent;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: border-color 0.15s, transform 0.15s;
+}
+
+.bg-picker .bg-thumb:hover {
+    transform: scale(1.03);
+}
+
+.bg-picker .bg-thumb.selected {
+    border-color: #1668dc;
+    box-shadow: 0 0 0 2px rgba(22, 104, 220, 0.25);
+}
+
+.bg-picker .bg-default {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: var(--ant-color-text-secondary, rgba(0, 0, 0, 0.55));
+    background: var(--ant-color-fill-tertiary, #f3f5f9);
+    border-color: var(--ant-color-border, #d9dee8);
+}
+
+.bg-picker .bg-default.selected {
+    border-color: #1668dc;
+}
+
+.bg-picker .bg-empty,
+.bg-picker .bg-hint {
+    margin-top: 6px;
+    font-size: 12px;
+    color: var(--ant-color-text-tertiary, rgba(0, 0, 0, 0.45));
+}
+
+.bg-picker .bg-folder {
+    margin-top: 10px;
+}
+
+.bg-picker .bg-slider {
+    margin-top: 14px;
+}
+
+.bg-picker .bg-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+}

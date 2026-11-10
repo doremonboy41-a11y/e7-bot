@@ -1,0 +1,76 @@
+.controls .toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.controls .settings {
+    display: grid;
+    grid-template-columns: 110px 1fr 190px 210px;
+    gap: 24px;
+    align-items: start;
+}
+
+@media (max-width: 760px) {
+    .controls .settings {
+        grid-template-columns: 1fr;
+    }
+}
+
+.controls .label {
+    font-weight: 600;
+    height: 22px;
+    margin-bottom: 6px;
+}
+
+.controls .label .info {
+    margin-left: 6px;
+    color: rgba(0, 0, 0, 0.35);
+    font-weight: normal;
+}
+
+.controls .limit-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-height: 36px;
+    transition: opacity 0.2s;
+}
+
+.controls .limit-row.dimmed {
+    opacity: 0.4;
+}
+
+.controls .limit-check {
+    width: 88px;
+}
+
+.controls .hint {
+    margin-top: 6px;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.45);
+}
+
+.controls .hint.inline {
+    margin-top: 0;
+}
+
+.controls .hint.warn {
+    color: #d46b08;
+}
+
+/* Confirm and Stop sit on the same rows as the Skystone and Gold limits */
+.controls .actions {
+    padding-top: 28px; /* label height + margin */
+}
+
+.controls .action-row {
+    display: flex;
+    align-items: center;
+    min-height: 36px;
+}
